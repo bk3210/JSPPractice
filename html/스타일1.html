@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color:salmon;
+        }
+
+        #title1{
+            color : purple;
+            font-size: 40pt;
+        }
+
+        .title2{
+            color: red;
+            font-family: 궁서체;
+            font-size:30px;
+        }
+
+        p#title1{
+            color:green;
+            font-size: 12pt;
+        }
+
+        p.center{
+            text-align: center;
+            color:green;
+            font-size: 14pt;
+        }
+
+        p.large{
+            font-size: 24pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>h1 태그에 스타일 적용하기1</h1>
+    <h1 id="title1">h1 태그에 스타일 적용하기2</h1>
+    <h1 id="title1">h1 태그에 스타일 적용하기3</h1>
+    <h1 class="title2">h1 태그에 스타일 적용하기4</h1>
+    <h1 class="title2">h1 태그에 스타일 적용하기5</h1>
+
+    <p id="title1">단락1</p>
+    <p class="title2">단락2</p>
+    <p class="center">단락3</p>
+    <p class="center large">단락4</p>
+    <p class="large center" style="color:red">단락5</p>
+    <p>단락6</p>
+</body>
+</html>
+<script>
+    //자바스크립트 - html을 dom이라는 객체로 만든다
+    // 첫번째 title1 id만 인식해서 바꿈 - 
+    document.getElementById("title1").innerHTML = "새로운 제목";
+    document.getElementsByClassName("title2")[0].innerHTML = "새로운 제목";
+    document.getElementsByClassName("title2")[1].innerHTML = "새로운 제목";
+</script>

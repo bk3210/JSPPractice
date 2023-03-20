@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트2</title>
+</head>
+<body>
+	<input type="text" name="nums">
+	<br>
+	<input type="text" name="nums">
+	<br>
+	<input type="text" name="nums">
+	<br>
+	<input type="text" name="nums">
+	<br>
+	<input type="text" name="nums">
+	<br>
+	<input type="text" name="nums">
+	<br>
+	<input type="text" name="nums">
+	<br>
+
+	<hr>
+
+	<input type="text" name="result">
+	<br>
+	<button type="button" id="btnResult">결과확인</button>
+</body>
+<script type="text/javascript">
+/* 	var result = document.getElementsByName("result");
+	var num = document.getElementsByName("nums");
+
+	function sum() {
+
+		for (i = 0; i < num.length; i++) {
+			result += num[i];
+		}
+	}
+
+	result.addEventListener(click, sum()); */
+
+	function init(){
+	values = [5,21,32,11,6,76,88];
+	nums = document.getElementsByName("nums");
+	for (i = 0; i < nums.length; i++) {
+		nums[i].value = values[i];
+	}		
+	}
+	window.onload=()=>{	
+		init();
+		let btnResult = document.getElementById("btnResult");
+		btnResult.addEventListener("click", () => {
+			let result = 0;
+			nums = document.getElementsByName("nums");
+			for (var i = 0; i < nums.length; i++) {
+				result += parseInt(nums[i].value); //값이 string 타입이라 변환
+			}
+			document.getElementsByName("result")[0].value = result; //result가 1개 뿐이어도 [0] 꼭 써야 함 -> 형식이 배열이라 그런듯?
+		})
+	}
+
+</script>
+</html>

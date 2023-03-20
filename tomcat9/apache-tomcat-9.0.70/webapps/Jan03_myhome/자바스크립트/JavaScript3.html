@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트3</title>
+</head>
+<body>
+	<input type="text" id="nums1">
+	<br>
+	<input type="text" id="nums2">
+	<br>
+	<input type="text" id="nums3">
+	<br>
+	<input type="text" id="nums4">
+	<br>
+	<input type="text" id="nums5">
+	<br>
+	<input type="text" id="nums6">
+	<br>
+	<input type="text" id="nums7">
+	<br>
+
+	<hr>
+
+	<input type="text" id="result">
+	<br>
+	<button type="button" id="btnResult">결과확인</button>
+</body>
+<script type="text/javascript">
+
+function putNum(){
+	values = [1,2,3,4,5,6,7];
+	for (let i = 1; i < 8; i++) {
+		/* values[i] = document.getElementById("nums"+(i+1)).value; */
+		let num = document.getElementById("nums"+i);
+		num.value = values[i-1];
+	}
+}
+
+window.onload =()=> {
+	putNum();
+	let btnResult = document.getElementById("btnResult");
+	btnResult.addEventListener("click", ()=>{
+		let result = 0;
+		for (let i = 1; i < 8; i++) {
+			result += parseInt(document.getElementById("nums"+i).value);
+		}
+		document.getElementById("result").value = result;
+	})
+}
+
+</script>
+</html>

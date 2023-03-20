@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>함수 표현식과 이벤트 핸들러</h2>
+	<!--예전에 쓰던 함수 호출 방식 -->
+	<button type="button" id="btnPress1" onclick="fnPress()">함수사용</button>	
+	<button type="button" id="btnPress2">함수표현식 사용</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	function fnPress(){
+		alert("함수호출");
+	}
+	
+	window.onload=function(){
+		var btnPress = document.getElementById("btnPress2");
+		btnPress.addEventListener("click", function(){	// 최신 방식
+			alert("함수표현식 호출");
+		})
+	}
+</script>

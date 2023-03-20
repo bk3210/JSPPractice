@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--모든 입력은 form 태그를 통해서만 서버로 보낼 수 있다
+    form 태그 안에 만들어진 input 태그들을 통해 서버로 정보를 보낸다.
+    
+    서버로 정보를 보내는 방법
+    1. get 방식 : 비교적 짧고, 간단한 정보를 보낼 때. header만 보내진다. 1024byte 이내의 정보만 보내지고
+    보내는 정보가 모두 노출되어서 중요 통신에는 사용할 수 없음
+    한글은 깨진다(인코딩 필수).
+    한글이나 공백이 있을 경우는 인코딩을 하여
+    서버로 보내고, 서버 쪽에서는 디코딩 작업을 해서 원상복구함
+    2. 클라이언트 =========> 서버
+        
+    header : 현재 정보, 아이피, 간단한 정보들을 미리 보냄
+    body : 실제 보내야 할 데이터, 파일을 보낸다든지, 게시글, 로그인 정보 등 많은 정보가 전달된다
+
+    post : 대용량의 중요 정보를 전달하는 방식. header와 body로 구성된 정보를 보낸다
+    url에 정보가 노출되지 않는다
+
+    form 태그의 속성에서 method속성에 post나 get을 지정할 수 있다.
+    지정하지 않을시 기본값으로 get이 사용된다.
+    action 속성에는 서버에서 이 전송을 처리할 페이지 정보가 들어간다. 지정하지 않으면 자기 페이지를 불러온다.
+    서버로 정보를 보내면 name 속성을 키로 하고 value 속성을 값으로 해서 키1=값1&키2=값2&키3=값3 형태로 전달된다.
+
+    -->
+    <form action="" method="post">
+        x : <input type="text" name="x"><br/>
+        y : <input type="text" name="y"><br/>
+        <!--submit type은 서버로 정보를 전송-->
+        <input type="submit" value="보내기">
+    </form>
+</body>
+</html>

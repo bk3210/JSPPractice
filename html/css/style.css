@@ -1,0 +1,21 @@
+body{
+    /* r : 0~255, g: 0~255, b: 0~255
+        rgb(255, 0, 0)
+        #ffffff, #ff0000
+        color:rgb(red, green, blue)
+    */
+    background-color: cornsilk;
+    background-image: url("../images/muffin.png");  /*반응형 웹이 나온 이후로 거의 안 쓴다(못생겼어)*/
+    background-repeat: repeat-x;        /*x축으로만 repeat 반복*/
+    color:#555555;
+    /*margin은 top-right-bottom-left 순으로 픽셀 부여, 반드시 단위 쓰기*/
+    margin: 10px 10px 10px 10px;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    border: 1px solid red;
+    background-color: rgb(68, 61, 139);
+    padding: 10px 10px;  /*2개만 주면 나머지에도 먹힘*/
+}

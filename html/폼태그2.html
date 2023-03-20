@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--한 페이지 안에 가급적 폼태그는 하나만-->
+    <!-- name속성 : input, select, textarea 태그만 갖는다
+                    서버로 정보를 전달할 때 정보의 key값으로 사용됨
+                    userid=test1234
+                    동일한 이름을 여러개 지을 수 있음(배열이 허용됨)
+                
+            id속성: 모든 태그가 가질 수 있다
+                    서버와 상관없이 브라우저 내에서 태그의 속성을 바꾸고자 할 때 태그 식별값으로 사용한다.
+                    절대 중복불가, 한 페이지 내에 한 개씩만
+
+            class속성 : css 사용할 때 주로 쓰임, id와 유사함. 모든 태그에 붙어서 태그 속성을 변경하거나 값을 읽고 쓴다.
+                        clss는 배열이다(중복 가능)-->
+    
+                        <!--name은 반드시 있어야 하고, id는 없어도 됨-->
+    <form action="">
+        <label for="userid">userid : </label><input type="text" name="userid" id="userid"><br/>
+        <label for="password">password : </label><input type="password" name="password"><br/>
+        <label for="username">username : </label><input type="text" name="username"><br/>
+
+        <input type="checkbox" name="lan" id="" value="1">자바
+        <input type="checkbox" name="lan" id="" value="2">파이썬
+        <input type="checkbox" name="lan" id="" value="3">C
+        <input type="checkbox" name="lan" id="" value="4">C+
+        <br/>
+        
+        <label for="sel1">자바</label><input type="checkbox" name="lan2" id="sel1" value="1">
+        <label for="sel2">파이썬</label><input type="checkbox" name="lan2" id="sel2" value="2">
+        <label for="sel3">C</label><input type="checkbox" name="lan2" id="sel3" value="3">
+        <label for="sel4">C+</label><input type="checkbox" name="lan2" id="sel4" value="4">
+        <br/>
+
+        <label for="ball1">메시</label><input type="radio" name="lan2" id="ball1" value="1">
+        <label for="ball2">호날두</label><input type="radio" name="lan2" id="ball2" value="2">
+        <label for="ball3">음바페</label><input type="radio" name="lan2" id="ball3" value="3">
+        <label for="ball4">네이마르</label><input type="radio" name="lan2" id="ball4" value="4">
+
+        <h1>폼 요소 그룹묶기</h1>
+        <fieldset>
+            <legend>개인정보</legend>
+            <ul>
+                <li>
+                    <label for="">이름</label><input type="text" name="username" id="">
+                </li>
+                <li>
+                    <label for="">이메일</label><input type="text" name="usermail" id="">
+                </li>
+            </ul>
+        </fieldset>
+
+    <!--요샌 submit 잘 안씀, submit이랑 동일한 button-->
+        <button>보내기</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+	let scoreList = [
+		{name : "홍길동", kor : 90, mat : 80, eng : 70},
+		{name : "김길동", kor : 80, mat : 70, eng : 60},
+		{name : "이길동", kor : 70, mat : 60, eng : 50},
+		{name : "박길동", kor : 60, mat : 50, eng : 40},
+		{name : "최길동", kor : 50, mat : 40, eng : 30}
+	];
+	
+	// total필드 추가하기
+	for(score of scoreList){
+		score.total = score.kor + score.mat + score.eng;
+		score.avg = score.total/3;
+	}
+	
+	scoreList.forEach((score)=>{
+		console.log(score.name, score.kor, score.mat, score.eng, score.total, score.avg);
+	});
+	
+	// 주급 데이터 5명만 저장해서 주급 계산기 만들기
+	
+	let payList = [
+		{name : "홍길동", time : 35, pay : 10000},
+		{name : "김길동", time : 45, pay : 20000},
+		{name : "이길동", time : 55, pay : 30000},
+		{name : "박길동", time : 25, pay : 40000},
+		{name : "최길동", time : 15, pay : 20000}
+	];
+	
+	for(pay of payList){
+		pay.base = pay.time * pay.pay;
+		pay.bonus = 0;
+		if(pay.time>20){
+			pay.bonus = (pay.time-20) * pay.pay * 0.5;
+		}
+		pay.total = pay.base + pay.bonus;
+	}
+	
+	payList.forEach((pay)=>{
+		console.log(pay.name, pay.time, pay.pay, pay.base, pay.bonus, pay.total);
+	});
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>화살표 함수</title>
+</head>
+<body>
+	<h1>화살표함수</h1>
+	<p>아 배고프다. 화살표 함수는 함수가 비교적 짧고 간단해서 별도의 함수를 만들기에는 애매하고, 굳이 메모리를<br/>
+	계속 잡고 있을 필요도 없고, 전체 시스템에서 일부만을 담당할 때 이름도 없이 간단하게 만들어서 쓰고 버릴 수 있다(일회용품)><br/>
+	함수 표현식이랑 거의 같은데 더 간단함<br/>
+	차이점은 이 표현식은 클래스의 this.인자를 사용할 수 없다는거<br/>함수 표현식은 가능하나 화살표함수는 안됨<br/></p>
+	
+	<pre>	<!-- 얘는 실무에서 쓰면 안되는애임 걍 그대로 출력해주는 거 -->
+		일반함수: 
+		function add(a, b){
+		return a+b;
+		}
+	
+		화살표함수: 람다
+		add = (a, b)=>{
+		return a+b;
+		}
+	</pre>
+</body>
+</html>
+
+<script type="text/javascript">
+	function add1(a, b){
+		return a+b;
+	}
+	
+	add2 = function(a, b){
+		return a+b;
+	}
+	
+	add3 = (a, b)=>{
+		return a+b;
+	}
+	
+	console.log(add1(5, 7));
+	console.log(add2(5, 7));
+	console.log(add3(5, 7));
+</script>

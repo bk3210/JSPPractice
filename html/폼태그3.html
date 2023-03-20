@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        히든태그 <input type="hidden" name="test" value="123"><br/>
+        text<input type="text" name="test2" size=10 maxlength="5" autofocus required placeholder="아이디입력" value="읽기만 가능" readonly><br/>
+        
+        <input type="search" name="" id=""><br/>
+        <input type="submit" value="검색"><br/>
+        url : <input type="url" value=""><br/>
+        email : <input type="email" value=""><br/>
+        tel : <input type="tel" value=""><br/>
+        number : <input type="number" min="10" max="20"><br/>
+        range : <input type="range" min="10" max="20"><br/>
+        color : <input type="color" value="#00ff00"><br/>
+        date : <input type="date"><br/>
+        file : <input type="file"><br/>
+
+        <select name="">
+            <optgroup label="점메추">점심</optgroup>
+                <option value="1">김치찌개</option>
+                <option value="2">그릭요거트 그래놀라</option>
+                <option value="3">참치스시</option>
+            </select>
+<br>
+            <input type="text" name="" id="" list="foodlist">
+            <datalist id="foodlist">
+            <optgroup label="저메추">저녁</optgroup>
+            <option value="4">미소라멘</option>
+            <option value="5">계란볶음밥</option>
+            <option value="6">스우동</option>
+        </datalist>
+
+        <br>
+        <textarea name="" id="" cols="30" rows="10">ddd</textarea>
+        <!--button태그의 타입은 디폴트가 submit
+        type를 안 쓰면 원치 않는 정보까지 전송될 수 있으므로 서버에 정보를 보내지 않으려면 button을 써줘야 함-->
+        <!--실제로는 submit을 잘 쓰지 않음(오류체크도 안 끝났는데 보낸다고...?)-->
+        <button type="submit">보내기</button>
+    </form>
+</body>
+</html>

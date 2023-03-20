@@ -1,0 +1,10 @@
+select a.rnum, a.image, seq
+from(
+select row_number() over(order by seq desc) as rnum, image , seq    
+from tb_gallery
+) a
+where a.rnum<6
+
+select a.rnum, a.seq, a.title, b.m_name
+from(
+select row_number() over(order by seq desc)

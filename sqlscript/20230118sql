@@ -1,0 +1,15 @@
+-- DB에 파일을 직접 저장할 수 있긴 하지만 대부분 그러지 않는다
+-- 작업을 할 SQL 스키마를 작성
+
+create table tb_gallery(
+    seq number primary key,
+    title varchar2(400) not null,
+    contents varchar2(400) not null,
+    image varchar2(400) not null,
+    wdate date,
+    writer varchar2(40)
+);
+create sequence sq_gallery;
+alter table tb_gallery add hit number;      -- hit 필드 추가 명령어
+
+select * from tb_gallery;

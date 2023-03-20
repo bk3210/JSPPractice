@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button type="button" id="button1" class="button" style="color:#ff0000">배경색바꾸기1</button><br/>
+	<button type="button" id="button2" class="button" style="color:#00ff00">배경색바꾸기2</button><br/>
+	<button type="button" id="button3" class="button" style="color:#0000ff">배경색바꾸기3</button><br/>
+	<button type="button" id="button4" class="button" style="color:#ffff00">배경색바꾸기4</button><br/>
+	<button type="button" id="button5" class="button" style="color:#00ffff">배경색바꾸기5</button><br/>
+
+</body>
+</html>
+<script type="text/javascript">
+	document.getElementsByTagName("body")[0].style.background = "#345645";
+	
+	// 노가다방식
+	/* window.onload=()=>{
+		let button1 = document.getElementById("button1");
+		let button2 = document.getElementById("button2");
+		let button3 = document.getElementById("button3");
+		let button4 = document.getElementById("button4");
+		let button5 = document.getElementById("button5");
+		let body = document.getElementsByTagName("body")[0];
+		button1.addEventListener("click", ()=>{
+			// css에서는 속성에 - 넣을 수 있는데 자바스크립트는 불가능
+			//	-a => A대문자로 바뀜(원래 background-color)
+			body.style.backgroundColor=button1.style.color;
+		});
+		button2.addEventListener("click", ()=>{
+			body.style.backgroundColor=button2.style.color;
+		});
+		button3.addEventListener("click", ()=>{
+			body.style.backgroundColor=button3.style.color;
+		});
+		button4.addEventListener("click", ()=>{
+			body.style.backgroundColor=button4.style.color;
+		});
+		button5.addEventListener("click", ()=>{
+			body.style.backgroundColor=button5.style.color;
+		}); 
+		}	*/
+		
+		// 좀더 간결
+		window.onload=()=>{
+			buttons = document.getElementsByClassName("button");
+			for(i=0; i<buttons.length; i++){
+				// id는 배열로 접근할 수 없다!!!!!!!!!!
+				// classname으로 접근하면 한꺼번에 배열로 접근 가능
+				//addEventListener에 함수에 이벤트를 매개변수로 전달할 수 있다
+				
+				// 여기있는 e는 그냥 매개변수
+				buttons[i].addEventListener("click", (e)=>{
+					console.log(e);
+					console.log(e.target);	// 이벤트 발생 객체(발생한 이벤트의 실체)
+					body = document.getElementsByTagName("body")[0];
+					body.style.background = e.target.style.color;	
+				})
+			}
+		}
+	
+		//target은 발생한 이벤트에 대한 정보를 담은 객체
+		
+	/* 
+	btnResult.addEventListener("click", ()=>{
+		let result=0;
+		for(i=0; i<6 i++){
+			var obs = document.getElementsByName("");
+		}
+		
+	}) */
+	
+
+</script>

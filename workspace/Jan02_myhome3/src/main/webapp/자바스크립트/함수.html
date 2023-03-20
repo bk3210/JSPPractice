@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 사용의 기초</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+// 함수 정의
+	function hello(name)
+	{
+		console.log("안녕하세요 " + name + "님");
+	}
+	//함수 호출
+	hello("홍길동");
+	 console.log(hello("장길산"));	// 에러 안 발생함
+	// undefined가 출력된다
+	
+	// 1~n까지 출력하는 함수 만들기
+	function printNum(limit){
+		for(i=1; i<=limit; i++){
+			console.log("i=", i);
+		}
+	}
+		
+	// 함수 호출하기
+/* 	printNum(5);
+	printNum(3); */
+	
+	// 기본값 : 매개변수에 기본값을 부여할 수 있다.(자바에는 없는거)
+	// overloading(다형성)을 지원하지 않는다(객체지향의 특성이라)
+	// 같은 페이지에 동일한 이름의 함수가 존재할 수 없음
+	// 단, 매개변수에 기본값을 부여해서 마치 overloading과 같은 효과를 얻을 수 있다
+	function printNum2(limit=10){				// 기본값에 10 부여
+		for(i = 1; i <= limit; i++){
+			console.log("i=", i);
+		}
+	}
+	
+	printNum2(); // 기본값이 적용됨
+	printNum2(5);	// 함수 여러개처럼 동작함
+	
+	function add(x=10, y=20, z=30){
+		console.log("x=", x);
+		console.log("y=", y);
+		console.log("z=", z);
+		return x+y+z;
+	}
+	
+	console.log(add());
+	console.log(add(1));
+	console.log(add(1,2));
+	console.log(add(1,2,3));
+	
+	// 기본값 줄 때 주의사항
+	// 매개변수에 기본값을 주는 경우와 주지 않는 두가지를 모두 사용할 경우에 앞쪽에 기본값이 없는 변수를 먼저 써야함
+	// 한번 기본값을 주면 그 뒤쪽에 있는 변수들도 모두 기본값을 줘야 함
+	// ex)myfunc(a,b,c,d) ㅇㅋ
+	// ex)myfunc(a,b,c=5,d=7) ㅇㅋ
+	// ex)myfunc(a=1,b,c=5,d=7) ㄴㄴ
+	// ex)myfunc(c=5, d=7, a,b) ㄴㄴ
+	
+	function myFunc(a, b, c=3, d=1){
+		console.log("a=", a);
+		console.log("b=", b);
+		console.log("c=", c);
+		console.log("d=", d);
+	}
+	
+	myFunc();
+	myFunc(10);
+	myFunc(10, 20);
+</script>

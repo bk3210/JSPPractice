@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>1월 4일 수업내용</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+	let person = {"name" : "홍길동", "age" : 23, "phone" : "010-0000-0000"};
+	console.log(person);
+	console.log(person.name);
+	console.log(person["name"]);
+	console.log(person.age);
+	console.log(person["age"]);
+	console.log(person.phone);
+	console.log(person["phone"]);
+	person.name="김길동";
+	person.age=26;
+	person.phone = "010-1111-1111";
+	console.log(person.name, person.age, person.phone);
+	
+	// JSON배열
+	// [] : 배열연산자
+	// {} : JSON연산자
+	// []안에 {}, {}안에 [] 둘 다 가능
+	let personList = [
+		{"name" : "홍길동", "age" : 30},
+		{"name" : "김길동", "age" : 24},
+		{"name" : "이길동", "age" : 16},
+		{"name" : "박길동", "age" : 25},		
+		{"name" : "최길동", "age" : 28}		
+	];
+	
+	// 콘솔출력(셋 다 표기가능)
+	console.log(personList[0]["name"]);
+	console.log(personList[0].name);
+	console.log(personList[0]['name']);
+	
+	/*  nod.js, react, vue : 자바스크립트 라이브러리, 프론트엔드를 구축할 때 가장 중요한 기술은 JSON
+		처음엔 lib로 시작 -> dll -> activeX -> xml 웹서비스 ->Ajax 형태로 진화해 왔음
+		lib : 프로그램 내에서 공통으로 사용할 함수들을 묶어서 한덩어리로 만들어 같이 사용
+		dll : lib를 독립시켜 다른 공간에 두고 함께 사용
+		activeX : 함수들을 다른 컴퓨터에 두고 복사본을 가져와서 사용. 기술 구현의 어려움이 있어서 사장됨
+		XML웹서비스 : 함수가 아닌 데이터를 공유. 데이터를 공통화된 표기 방식으로 기술해서 주고받는 방식
+			<xml>
+				<person>
+					<name>홍길동</name>
+					<age>23</age>
+				</person>
+			보내는 쪽에서는 DB에서 정보를 읽어서 xml 파일로 만들어 상대방에게 보내면 상대방은 xml 파일로부터 데이터만 추출해서(파싱) DB에 저장함. 이 과정에 시간이 많이 걸림
+			
+		Ajax : 비동기적으로 서버와의 통신을 담당함. 이때 Ajax에서 JSON 기술을 적극적으로 활용하기 시작함
+				XML보다 JSON 표기법이 더 효율적임
+				
+	*/
+</script>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>표만들기</h1>
+    <table border="1" cellspacing="0" width="80%">
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+            <td>1행3열</td>
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td>2행3열</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h1>표 만들기 2번째</h1>
+    <table style="width:80%; border:1px solid darkgray; margin: auto;">
+        <colgroup><!--각 열별로 스타일 지정할 때 쓰는 태그-->
+            <col width="12%">
+            <col width="*">
+            <col width="12%">
+            <col width="12%">
+            <col width="12%">
+        </colgroup>
+        <!--테이블 제목줄 표시할 때 쓰는 태그-->
+        <thead>
+            <tr>
+                <th style="border: 1px solid darkgray">번호</th>    <!--style태그는 tr태그에 먹히지 않음-->
+                <th style="border: 1px solid darkgray">제목</th>
+                <th style="border: 1px solid darkgray">작성자</th>
+                <th style="border: 1px solid darkgray">작성일</th>
+                <th style="border: 1px solid darkgray">조회수</th>
+            </tr>
+        </thead>
+        <!--표 내용-->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>html이란 무엇인가</td>
+                <td>홍길동</td>
+                <td>2022-12-27</td>
+                <td>522</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p id="summary">테이블에 대한 설명을 붙인다.</p>
+    <!--id는 식별값, 이제 원칙적으로 summary라는 식별값은 이 문서 내에서 이 테이블에만 붙일 수 있음-->
+    <table style="width:60%" border="1" aria-describedby="summary">
+        <caption>열 합치기</caption>
+        <colgroup><!--각 열별로 스타일 지정할 때 쓰는 태그-->
+            <col width="20%">
+            <col width="30%">
+            <col width="20%">
+            <col width="30%">
+        </colgroup>
+        <tr>
+            <th>이름</th>
+            <td></td>
+            <th>연락처</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3"></td>   <!--colspan : 열(column) 합치기-->
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td colspan="3"></td>
+        </tr>
+    </table>
+
+    <hr>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	//prompt 함수 : 유일한 입력함수. 데이터 입력 팝업창을 열어줌. 실제 자주 쓰진 않음
+	// 입력은 html의 input태그로 받지 자바스크립트로 하는거 아님
+	a = prompt("나이를 입력하세요", 22);	// 22는 기본값
+	if (a == null){
+		alert("취소하셨습니다");	// if문은 자바랑 문법 같음(둘 다 c언어 파생이라)
+	}else{
+		console.log("나이 : " + a);
+	}
+	
+	console.log(a);	// 취소 버튼을 누르면 null이 입력됨
+	
+</script>
